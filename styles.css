@@ -1,0 +1,487 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #FFA500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .btn-primary {
+    background-color: #FFA500;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e59400;
+  }
+  
+  /* Header */
+  .header {
+    background-color: #000;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e59400;
+    font-size: 1.8rem;
+    font-weight: bold
+  
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+  
+  /* Hamburger Menu (Mobile Only) */
+  .menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #FFA500;
+    margin: 4px 0;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #FFA500;
+  }
+  
+  /* Mobile Menu */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex; /* Show hamburger menu on mobile */
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links by default on mobile */
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show nav links when menu is toggled */
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('car-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .booking-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Services Section */
+.services {
+  background-color: #000;
+  padding: 60px 0;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  flex: 1 1 200px;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(255, 165, 0, 0.2);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #FFA500;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+  
+  /* Notre Flotte Section */
+  .fleet {
+    background-color: #000;
+    padding: 60px 0;
+  }
+  
+  .car-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .car-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .car-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(255, 165, 0, 0.2);
+  }
+  
+  .car-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .car-card h3 {
+    font-size: 1.5rem;
+    color: #FFA500;
+    margin-bottom: 10px;
+  }
+  
+  .car-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .car-card .price {
+    font-size: 1.2rem;
+    color: #FFA500;
+    font-weight: bold;
+  }
+
+  .car-card img {
+    height: 200px;
+    width: auto;
+  }
+  
+  /* Motos Section */
+.motos {
+  background-color: #000;
+  padding: 60px 0;
+}
+
+.moto-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.moto-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.moto-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(255, 165, 0, 0.2);
+}
+
+.moto-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.moto-card h3 {
+  font-size: 1.5rem;
+  color: #FFA500;
+  margin-bottom: 10px;
+}
+
+.moto-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.moto-card .price {
+  font-size: 1.2rem;
+  color: #FFA500;
+  font-weight: bold;
+}
+.moto-card img {
+  height: 200px;
+  width: auto;
+}
+  
+  /* Tarifs Section */
+  .pricing {
+    background-color: #000;
+    padding: 40px 0;
+  }
+  
+  .pricing-table {
+    overflow-x: auto;
+  }
+  
+  .pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .pricing-table th, .pricing-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #FFA500;
+  }
+  
+  .pricing-table th {
+    background-color: #FFA500;
+    color: #000;
+  }
+  
+  .pricing-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+  }
+  
+  /* À Propos Section */
+  .about {
+    background-color: #000;
+    padding: 40px 0;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  /* Contact Section */
+.contact {
+    background-color: #000000;
+    padding: 60px 0;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .contact-form {
+    flex: 1 1 400px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+  }
+  
+  .contact-info {
+    flex: 1 1 400px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .contact-info iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  /* Footer Section */
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-logo img {
+    height: 50px;
+  }
+  
+  .footer-links h3,
+  .footer-social h3,
+  .footer-newsletter h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+  }
+  
+  .footer-links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #FFA500;
+  }
+  
+  .footer-social a {
+    margin-right: 10px;
+  }
+  
+  .footer-social img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-newsletter input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+  }
+  
+  .footer-bottom p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
